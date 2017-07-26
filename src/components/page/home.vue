@@ -7,7 +7,7 @@
           <img src="../../assets/images/chat.png" width="24" height="24" class="chat-img">
       </div>
       <div v-if="active == 0">
-          首页
+          <index></index>
       </div>
       <div v-if="active == 1">
           书影音
@@ -48,12 +48,16 @@
 </template>
 
 <script>
+import index from '@/components/page/index'
 export default {
   data () {
     return {
         active:0
     }
-  }
+  },
+  components:{
+    index
+  }   
 }
 </script>
 
