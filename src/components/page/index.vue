@@ -12,6 +12,43 @@
                 <span v-for="(item,index) in slideList.length" :class="{'active':index===currentIndex}" @mouseover="change(index)"></span>
             </div>
         </div>
+        <div class="news-box">
+            <div class="white-box"></div>
+            <div class="title-box">热点</div>
+            <div class="news-cells">
+                <div class="news-left">
+                    <span class="news-title">给自己订个小目标</span>
+                    <span class="news-label">我问儿子省重点有没有希望，他沉吟半天说：“很难哎！没什么把握。”</span>
+                    <span class="news-label-2">作者：风行水上</span>
+                </div>
+                <div class="news-right">
+                    <img class="news-images"  src="../../assets/images/news-1.jpg">
+                </div>
+            </div>
+            <div class="news-cells">
+                <div class="news-left">
+                    <span class="news-title">给大英百物展“找茬”：法老王变脸？刘易斯棋子少了几颗？</span>
+                    <span class="news-label">木乃伊脸都绿了</span>
+                    <span class="news-label-2">作者：辄馨</span>
+                </div>
+                <div class="news-right">
+                    <img class="news-images"  src="../../assets/images/news-2.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="timer-box">
+            <div class="gray-box"></div>
+            <div class="title-box">豆瓣时刻 <span class="more">更多专栏<img src="../../assets/images/more.png" width="24" height="24"></span></div>
+            <div class="card-box">
+                <div class="header-box"></div>
+                <img class="person-images" src="" width="30" height="30">
+                <span class="person-name">曾志荣</span>
+                <span class="person-career">艺术策划人,美学普及者</span>
+                <div class="content-box">
+
+                </div>
+            </div>
+        </div>
   </div>
 </template>
 
@@ -131,5 +168,94 @@ created() {
 
     .list-leave {
         transform: translateX(0)
+    }
+    .news-box{
+        background: #fff;
+        .white-box{
+            height:1rem;
+        }
+        .title-box{
+            height:1.2rem;
+            line-height: 1.2rem;
+            border-left:.3rem solid #ff8447; 
+            color: #ff8447;
+            padding-left:1rem; 
+            font-size: 1rem;
+        }
+    }
+    .news-cells{
+         display: flex;
+         border-bottom:1px solid #e5e5e5;
+        .news-left{
+            flex:3;
+            span{
+                display: block;
+                padding:0 1.2rem;
+            }
+            .news-title{
+                font-weight: bold;
+                font-size: 1.1rem;
+                margin-top:1rem;
+                color:#474747; 
+            }
+            .news-label{
+                margin-top:.75rem;
+                color:#9b9b9b;
+                font-size: .9rem;
+            }
+            .news-label-2{
+                margin:1.2rem 0;
+                color:#9b9b9b;
+                font-size: .9rem;
+            }
+            
+        }
+        .news-right{
+            flex:1;
+            .news-images{
+                margin-top:1rem; 
+            }
+        }
+    }
+    .timer-box{
+        background: #f7f7f7;
+        .gray-box{
+            height: 1rem;
+        }
+        .title-box{
+            height:1.2rem;
+            line-height: 1.2rem;
+            border-left:.3rem solid #42bd56; 
+            color: #8b8b8b;
+            padding-left:1rem; 
+            font-size: 1rem;
+            .more{
+                margin-right:.7rem; 
+                color:#b6b6b6;
+                float:right;
+                font-size:.8rem;
+                img{
+                    vertical-align:middle;
+                }
+            }
+        }
+    }
+    .card-box{
+        width: 70%;
+        margin-left: 1.2rem;
+        margin-top:1.2rem; 
+        .header-box{
+            position: relative;
+            height:5rem;
+            border-top-left-radius:.5rem;
+            border-top-right-radius:.5rem;
+            background:red;
+        }
+        .person-images{
+            position: absolute;
+            top:2rem;
+            left:45%;
+        }
+
     }
 </style>

@@ -111,12 +111,13 @@ export default {
     }
     .foot-box{
         z-index: 1000;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         display: flex;
         width: 100%;
         border-top:1px solid #CDCDCD; 
+        background: #f7f7f7;
         .foot-cell{
             flex: 1;
             text-align:center;
